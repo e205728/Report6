@@ -17,7 +17,7 @@ public class Quest {
         }
         System.out.println("================================================================");
 
-        if(demon.isDead()){
+        if(demon.getDead()){
             System.out.printf("世界が平和に戻りました。\n");
         }else {
             System.out.printf("世界が滅んでしまいました。\n");
@@ -31,14 +31,14 @@ public class Quest {
         System.out.printf("%s vs. %s\n", hero.getName(), enemy.getName());
 
         int turn = 0;
-        while( hero.isDead() == false && enemy.isDead() == false ){
+        while( hero.getDead() == false && enemy.getDead() == false ){
             System.out.println("----------------------------------------------------------------");
             turn++;
             System.out.printf("%dターン目開始！\n", turn);
             hero.attack(enemy);
             enemy.attack(hero);
         }
-        return enemy.isDead();
+        return enemy.getDead();
     }
 
     public boolean randomDice(){

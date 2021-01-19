@@ -16,6 +16,6 @@ public class KnightTest {
         Hero demoHero = new Hero("デモ勇者", 1000, 1000, true, true);
         Demon slime = new Demon("スライムもどき", 10, 10);
         demoHero.attack(slime);
-        assertEquals(slime.isDead(), true);
+        assertEquals(slime.getDead(), true);
     }
 }
